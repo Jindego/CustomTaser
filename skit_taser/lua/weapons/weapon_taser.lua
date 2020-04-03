@@ -55,9 +55,9 @@ function SWEP:Deploy()
         self.ShootPos:Spawn()
 		
         if ( not self.Owner:Crouching() ) then
-			self.ShootPos:SetPos( self:GetBonePosition( self:LookupBone( "ValveBiped.Bip01_R_Hand" ) ) )
+			self.ShootPos:SetPos( self:GetBonePosition( self:LookupBone( "ValveBiped.Bip01_R_Forearm" ) ) )
 		else
-			self.ShootPos:SetPos( self:GetBonePosition( self:LookupBone( "ValveBiped.Bip01_R_Hand" ) ) )
+			self.ShootPos:SetPos( self:GetBonePosition( self:LookupBone( "ValveBiped.Bip01_R_Forearm" ) ) )
 		end
 		
 		local range = GetConVar( "taser_range" ):GetFloat() or 450
@@ -95,9 +95,9 @@ end
 function SWEP:Think()
     if ( SERVER and IsValid( self.ShootPos ) ) then
         if ( not self.Owner:Crouching() ) then
-			self.ShootPos:SetPos( self:GetBonePosition( self:LookupBone( "ValveBiped.Bip01_R_Hand" ) ) )
+			self.ShootPos:SetPos( self:GetBonePosition( self:LookupBone( "ValveBiped.Bip01_R_Forearm" ) ) )
 		else
-			self.ShootPos:SetPos( self:GetBonePosition( self:LookupBone( "ValveBiped.Bip01_R_Hand" ) ) )
+			self.ShootPos:SetPos( self:GetBonePosition( self:LookupBone( "ValveBiped.Bip01_R_Forearm" ) ) )
 		end
 
         self.ShootPos:SetAngles( Angle( 0, 0, 0 ) )
@@ -108,9 +108,9 @@ function SWEP:Think()
         self.ShootPos:SetCollisionGroup( COLLISION_GROUP_IN_VEHICLE )
 		
         if ( not self.Owner:Crouching() ) then
-			self.ShootPos:SetPos( self:GetBonePosition( self:LookupBone( "ValveBiped.Bip01_R_Hand" ) ) )
+			self.ShootPos:SetPos( self:GetBonePosition( self:LookupBone( "ValveBiped.Bip01_R_Forearm" ) ) )
 		else
-			self.ShootPos:SetPos( self:GetBonePosition( self:LookupBone( "ValveBiped.Bip01_R_Hand" ) ) )
+			self.ShootPos:SetPos( self:GetBonePosition( self:LookupBone( "ValveBiped.Bip01_R_Forearm" ) ) )
 		end
 		
         self.ShootPos:Spawn()
